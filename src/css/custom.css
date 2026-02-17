@@ -118,17 +118,17 @@
   text-decoration: none;
   transition: all 0.2s ease;
   cursor: pointer;
-  
-  svg {
-    flex-shrink: 0;
-    color: #22c55e;
-  }
+}
 
-  &:hover {
-    border-color: rgba(95, 138, 250, 0.5);
-    text-decoration: none;
-    color: var(--ifm-font-color-base);
-  }
+.badge svg {
+  flex-shrink: 0;
+  color: #22c55e;
+}
+
+.badge:hover {
+  border-color: rgba(95, 138, 250, 0.5);
+  text-decoration: none;
+  color: var(--ifm-font-color-base);
 }
 
 
@@ -164,10 +164,10 @@
 
   --color-tooltip-bg: #f1f5f9;
   --color-tooltip-text: #1e293b;
+}
 
-  hr {
-    background-color: #2d2d2d;
-  }
+[data-theme='dark'] hr {
+  background-color: #2d2d2d;
 }
 
 /* Force dark theme background with higher specificity */
@@ -234,18 +234,24 @@ h2 {
 .auto-col {
 
   padding: 0 var(--ifm-spacing-horizontal);
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .auto-col {
     flex: 1 1 100%;
     max-width: 100%;
   }
-  
-  @media (min-width: 769px) and (max-width: 1200px) {
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .auto-col {
     flex: 1 1 calc(50%);
     max-width: calc(50%);
   }
-  
-  @media (min-width: 1201px) {
+}
+
+@media (min-width: 1201px) {
+  .auto-col {
     flex: 1 1 calc(33.333%);
     max-width: calc(50%);
   }
@@ -285,7 +291,7 @@ li>ul {
   margin-top: 0.4rem;
 }
 
-// dark style
+/* dark style */
 [data-theme='dark'] .menu__list .menu__list {
   border-left: 2px solid rgba(130, 170, 255, 0.2);
 }
