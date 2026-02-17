@@ -17,7 +17,7 @@ Click on a request to review its details, including the type of request, the pro
 ![Request Details](/docs/governance/request-details.png)
 
 :::warning Governance Role
-Only team members with the **[Governance](../treasury/roles-and-permissions.md#governance) role** can review the details of the request and cast their vote to either **approve** or **reject** it.
+Only team members with the **[Governance](../governance/roles-and-permissions.md#governance) role** can review the details of the request and cast their vote to either **approve** or **reject** it.
 :::
 
 ---

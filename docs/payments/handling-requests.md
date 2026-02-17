@@ -17,7 +17,7 @@ Click on a request to review its details, including the recipient, the amount, t
 ![Request Details](/docs/payments/request-details.png)
 
 :::warning Finance Role
-Only team members with the **[Finance](../treasury/roles-and-permissions.md#finance) role** can review the details of the request and cast their vote to either **approve** or **reject** it.
+Only team members with the **[Finance](../governance/roles-and-permissions.md#finance) role** can review the details of the request and cast their vote to either **approve** or **reject** it.
 :::
 
 :::info Insufficient Funds

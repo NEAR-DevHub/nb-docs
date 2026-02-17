@@ -99,7 +99,7 @@ New chains and assets are being added regularly, so if you don't see a specific 
 
 ## Team Members & Roles
 
-Treasuries are composed by multiple members, and each member can be assigned multiple [roles and permissions](./roles-and-permissions.md). There are three main roles in a treasury:
+Treasuries are composed by multiple members, and each member can be assigned multiple [roles and permissions](./governance/roles-and-permissions.md). There are three main roles in a treasury:
 
 <div className="row margin-top--lg margin-bottom--lg" style={{ gridGap: '3rem 0rem' }}>
   <div className="auto-col">

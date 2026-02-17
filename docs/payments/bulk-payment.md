@@ -8,7 +8,7 @@ The treasury funds can be used to send payments to an external account. In this 
 
 :::warning Requestor Role
 
-Payment requests can only be created by team members with the [Requestor](../treasury/roles-and-permissions.md#requestor) role, and they require approval from team members with the [Finance](../treasury/roles-and-permissions.md#finance) role before they can be executed
+Payment requests can only be created by team members with the [Requestor](../governance/roles-and-permissions.md#requestor) role, and they require approval from team members with the [Finance](../governance/roles-and-permissions.md#finance) role before they can be executed
 
 :::
 
@@ -58,7 +58,7 @@ Make sure to select the right blockchain and enter the correct wallet addresses,
 
 ## What's Next?
 
-After submitting the payment request, it will be ready for the [Finance](../treasury/roles-and-permissions.md#finance) team members to review and vote on the request.
+After submitting the payment request, it will be ready for the [Finance](../governance/roles-and-permissions.md#finance) team members to review and vote on the request.
 
 :::tip Part of the Finance team?
 

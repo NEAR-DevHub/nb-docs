@@ -12,7 +12,7 @@ Need to request multiple payments at once? Check the [Proposing Multiple Payment
 
 :::warning Requestor Role
 
-Payment requests can only be created by team members with the [Requestor](../treasury/roles-and-permissions.md#requestor) role, and they require approval from team members with the [Finance](../treasury/roles-and-permissions.md#finance) role before they can be executed.
+Payment requests can only be created by team members with the [Requestor](../governance/roles-and-permissions.md#requestor) role, and they require approval from team members with the [Finance](../governance/roles-and-permissions.md#finance) role before they can be executed.
 
 :::
 
@@ -66,7 +66,7 @@ Always double-check the wallet address before submitting the payment request to 
 
 ## What's Next?
 
-After submitting the payment request, it will be ready for the [Finance](../treasury/roles-and-permissions.md#finance) team members to review and [vote on the request](./handling-requests.md).
+After submitting the payment request, it will be ready for the [Finance](../governance/roles-and-permissions.md#finance) team members to review and [vote on the request](./handling-requests.md).
 
 :::tip Part of the Finance team?
 

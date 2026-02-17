@@ -76,7 +76,7 @@ In contrast to voting thresholds, which can be configured separately for Governa
 
 ## What's Next?
 
-After submitting the payment request, it will be ready for the [Governance](../treasury/roles-and-permissions.md#governance) team members to review and [vote on the request](./handling-requests.md).
+After submitting the payment request, it will be ready for the [Governance](../governance/roles-and-permissions.md#governance) team members to review and [vote on the request](./handling-requests.md).
 
 :::tip Part of the Governance team?
 

@@ -30,4 +30,4 @@ Only team members with the [Request](./governance/roles-and-permissions.md#reque
 
 ## What's Next?
 
-The swap request will then go through the same approval process as other treasury transactions, requiring the necessary votes from team members with the [Finance](./roles-and-permissions.md#finance) role based on the treasury's configured voting thresholds.
+The swap request will then go through the same approval process as other treasury transactions, requiring the necessary votes from team members with the [Finance](./governance/roles-and-permissions.md#finance) role based on the treasury's configured voting thresholds.
