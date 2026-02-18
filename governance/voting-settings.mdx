@@ -1,0 +1,69 @@
+---
+title: "Voting Rules"
+description: "When creating a treasury you will be able to setup the  for all requests in the treasury, this voting threshold is the  required for a proposal to be approved."
+---
+
+![Creating Treasury](/images/governance/assets/images/creating-treasury-members-d8923b6b411e2b8f9cd5e9ff46e19ba6.png)
+
+***
+
+## Updating Voting Rules[​](#updating-voting-rules "Direct link to Updating Voting Rules")
+
+Once the treasury is created, team members with the [Governance](/governance/members-and-roles#governance) role can present proposals to change the treasury's configuration, including its voting thresholds and voting period.
+
+![Creating Treasury](/images/governance/assets/images/voting-e25c7c8e381819d352b1477e9a5672dc.png)
+
+<Warning>
+  Only members with the [Governance](/governance/members-and-roles#governance) role can create proposals to update the treasury's voting settings
+</Warning>
+
+***
+
+## Voting Settings Explained[​](#voting-settings-explained "Direct link to Voting Settings Explained")
+
+There are two main configurations that can be updated through proposals: [Voting Thresholds](#voting-thresholds), and the [Voting Duration](#voting-duration).
+
+***
+
+### Voting Thresholds[​](#voting-thresholds "Direct link to Voting Thresholds")
+
+A voting threshold is the **minimum number of votes required for a proposal to be approved**. For example, if the treasury has a voting threshold of 2, it means that at least **2 votes in favor are needed for the proposal to pass**.
+
+Treasuries separately configure voting thresholds for Governance and Finance proposals, which means that the required number of votes for a proposal to be approved can differ based on the type of proposal being voted on.
+
+### Governance Threshold
+
+How many [Governance](/governance/members-and-roles#governance) approvals are required for:
+
+* [Editing Team Members](#)
+* [Updating Voting Settings](#)
+
+### Finance Threshold
+
+How many [Finance](/governance/members-and-roles#finance) approvals are required for:
+
+* [Making Payments](#)
+* [Swapping Assets](#)
+* [Handling Staked Assets](#)
+
+***
+
+### Voting Duration[​](#voting-duration "Direct link to Voting Duration")
+
+The voting duration is the **time period during which team members can cast their votes on a proposal**. For example, if the voting duration is set to 3 days, it means that team members will have 3 days to vote on a proposal after it has been created.
+
+If the required number of votes is reached within the voting duration, the proposal is approved and executed immediately. However, if the not enough members vote in favor of the proposal within the voting duration, the proposal then expires and is automatically rejected by the system.
+
+<Info>
+  In contrast to voting thresholds, which can be configured separately for Governance and Finance proposals, the voting duration is a single setting that applies to all proposals in the treasury, regardless of their type
+</Info>
+
+***
+
+## What's Next?[​](#whats-next "Direct link to What's Next?")
+
+After submitting the payment request, it will be ready for the [Governance](/governance/members-and-roles#governance) team members to review and [vote on the request](/governance/handling-requests).
+
+<Check>
+  Head to [Handling Payment Requests](/governance/handling-requests) to learn how to review and vote on governance requests
+</Check>

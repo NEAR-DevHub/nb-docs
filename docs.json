@@ -1,0 +1,48 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "aspen",
+  "name": "Trezu Docs",
+  "colors": {
+    "primary": "#0D9373",
+    "light": "#55D799",
+    "dark": "#0D9373"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "groups": [
+      {
+        "group": "Getting Started",
+        "pages": [
+          "home",
+          "what-is"
+        ]
+      },
+      {
+        "group": "Governance",
+        "pages": [
+          "governance/members-and-roles",
+          "governance/voting-settings",
+          "governance/handling-requests"
+        ]
+      },
+      {
+        "group": "Payments",
+        "pages": [
+          "payments/single-payment",
+          "payments/bulk-payment",
+          "payments/handling-requests"
+        ]
+      },
+      {
+        "group": "Swap",
+        "pages": [
+          "swap"
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/images/img/logo.svg",
+    "dark": "/images/img/logo-dark.svg"
+  }
+}
