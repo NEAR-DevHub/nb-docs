@@ -1,17 +1,21 @@
 ---
 title: "Proposing Multiple Payments"
-description: "The treasury funds can be used to send payments to an external account. In this section, you will learn how to create bulk payment requests to pay multiple recipients at once."
+description: "Request payments for multiple recipients at once"
 ---
 
+Besides being able to create [requests for single payments](./single-payment.mdx), you can also create bulk payment requests to pay multiple recipients at once.
+
+This is especially useful when you need to pay a large number of recipients with the same token, as it allows you to request all payments in a single request, saving you from having to create them separately.
+
 <Warning>
-  Payment requests can only be created by team members with the [Requestor](/governance/members-and-roles#requestor) role, and they require approval from team members with the [Finance](/governance/members-and-roles#finance) role before they can be executed
+  Payment requests can only be created by team members with the [Requestor](/governance/members-and-roles#requestor) role, and they require approval from team members with the [Finance](/governance/members-and-roles#finance) role before they can be executed.
 </Warning>
 
 ***
 
 ## Bulk Payment Request[​](#bulk-payment-request "Direct link to Bulk Payment Request")
 
-Navigate to the **`Payments`** section in the left sidebar, then click on the **`Bulk Payments`**.
+Navigate to the **`Payments`** section in the left sidebar, then click **`Bulk Payments`**.
 
 ![Bulk Payment Button](/assets/docs/payments/bulk-payment-button.png)
 
@@ -23,7 +27,8 @@ You will need to specify in which token you want to pay the recipients - all rec
   The expected format is a list of recipients with their wallet address and the amount to be paid, e.g. if we want to pay `10.50 USDC` to `alice.near` and `21.34 USDC` to `bob.near`, you can manually provide the payment data in the **Provide Data** section as follows:
 
   ```
-  alice.near, 10.50bob.near, 21.34
+  alice.near, 10.50
+  bob.near, 21.34
   ```
 
   Or download our [template](/assets/files/bulk_payment_template-f0ed31016f01c78dcc14422e3367682a.csv) and fill in the payment details, then upload the file in the **Upload File** section.
@@ -38,7 +43,7 @@ Make sure to review the bulk payment request before submitting it. You can also 
 ![Bulk Payment Review](/assets/docs/payments/bulk-payment-review.png)
 
 <Warning>
-  Make sure to select the right blockchain and enter the correct wallet addresses, as payments are irreversible
+  Make sure to select the right blockchain and enter the correct wallet addresses, as payments are irreversible.
 </Warning>
 
 ***
@@ -48,5 +53,5 @@ Make sure to review the bulk payment request before submitting it. You can also 
 After submitting the payment request, it will be ready for the [Finance](/governance/members-and-roles#finance) team members to review and vote on the request.
 
 <Check>
-  Head to [Handling Payment Requests](/payments/handling-requests) to learn how to review and vote on payment requests
+  Head to [Handling Payment Requests](/payments/handling-requests) to learn how to review and vote on payment requests.
 </Check>
