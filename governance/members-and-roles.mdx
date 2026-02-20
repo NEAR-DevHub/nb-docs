@@ -1,9 +1,11 @@
 ---
 title: "Members and Roles"
-description: "Treasuries are composed by multiple members, each with specific roles and permissions that determine what actions they can perform within the treasury."
+description: "Discover how to manage your treasury's team members and their roles"
 ---
 
-![Members](/images/governance/assets/images/members-bd8e5d6e78274b3ec356b13dc1289bf0.png)
+In Trezu, each treasury is a shared multisig account, where multiple members collectively control the treasury's assets and actions. No single member has unilateral control over the treasury, and to perform any action the team needs to reach consensus.
+
+![Members](/assets/docs/governance/members.png)
 
 <Info>
   You can manage your team members and their roles in the **`Members`** section in the left sidebar.
@@ -11,7 +13,22 @@ description: "Treasuries are composed by multiple members, each with specific ro
 
 ***
 
+## Members
+
+A member in Trezu represents a wallet address that can participate in the treasury.
+
+Each member:
+- Connects using their own wallet (e.g. a browser wallet, mobile wallet, or hardware wallet)
+- Signs proposals and votes using that wallet
+- Acts independently from other members
+
+This is the core multisig concept: multiple wallets collectively control one treasury. No single member has unilateral control over the treasury's funds, and to perform any action the team needs to reach consensus.
+
+***
+
 ## Roles & Permissions[​](#roles--permissions "Direct link to Roles & Permissions")
+
+Roles define what actions a member’s wallet is allowed to perform within the treasury.
 
 There are three roles in a treasury: [**Requestor**](#requestor), [**Finance**](#finance), and [**Governance**](#governance). Each role has specific permissions that determine what actions members can perform within the treasury.
 
@@ -25,14 +42,14 @@ There are three roles in a treasury: [**Requestor**](#requestor), [**Finance**](
 
 Allows to create requests related to the treasury's funds (e.g. treasury transaction requests).
 
-### Can
+#### Can
 
 * [✅ Create payment requests](#)
 * [✅ Create staking, unstaking, and withdraw requests](#)
 * [✅ Create asset exchange requests](#)
-* [✅ Delete their own treasury transaction requests](#)
+* [✅ Delete their own pending requests](#)
 
-### Cannot
+#### Cannot
 
 * [❌ Vote on any request](#)
 
@@ -40,15 +57,16 @@ Allows to create requests related to the treasury's funds (e.g. treasury transac
 
 ### Finance[​](#finance "Direct link to Finance")
 
-Responsible for reviewing and voting on treasury transaction requests.
+Responsible for voting on treasury transaction requests - those created by [Requestors](#requestor).
 
-### Can
+#### Can
 
 * [✅ Vote to approve or reject requests created by Requestors](#)
 
-### Cannot
+#### Cannot
 
 * [❌ Create, edit or delete requests](#)
+* [❌ Manage members or treasury settings](#)
 
 ***
 
@@ -56,7 +74,11 @@ Responsible for reviewing and voting on treasury transaction requests.
 
 Responsible for configuring the treasury's settings and member configuration.
 
-### Can
+<Warning>
+Exercise caution when assigning the Governance role, as this role has extensive control over the treasury's settings. [Read More](#governance-is-the-highest-trust-role)
+</Warning>
+
+#### Can
 
 * [✅ Create requests to add, edit, or delete members](#)
 * [✅ Create requests to update the voting duration](#)
@@ -65,10 +87,25 @@ Responsible for configuring the treasury's settings and member configuration.
 * [✅ Vote on any treasury configuration requests](#)
 * [✅ Delete their own requests](#)
 
-### Cannot
+#### Cannot
 
 * [❌ Create financial requests (e.g., payments, staking)](#)
 * [❌ Vote on financial requests created by Requestors](#)
+
+***
+
+## Governance is the Highest-Trust Role
+The Governance role controls who has power in the system. Because Governance controls membership and voting rules, it should be treated as the highest-trust role in the treasury.
+
+Governance is intentionally powerful and not meant for day-to-day use.
+
+Best practice is to:
+- Assign Governance to highly secure wallets
+- Use high voting thresholds
+- Share Governance across multiple trusted members when possible
+
+Treasury safety comes from isolating and sharing authority, not from weakening permissions
+
 
 ***
 
@@ -96,6 +133,9 @@ The following table shows the actions users can perform for each role:
 
 When assigning roles and permissions within your treasury, consider the following best practices:
 
-* **Least Privilege**: Assign the least privilege necessary for each member to perform their duties. This enhances security and reduces the risk of errors
-* **Regular Review**: Periodically review assigned roles and permissions to ensure they align with your treasury's current needs
-* **Administrator Caution**: Exercise caution when assigning the Governance role, as this role has extensive control over the treasury's settings
+
+* **Use least privilege**: Grant only the roles needed for each member’s responsibilities
+* **Separate duties**: Maintain a clear separation between financial operations and treasury configuration, do not assign the Governance role to Requestors or Finance members
+* **Use voting thresholds intentionally**: Higher-risk actions (like configuration changes) should require more approvals
+* **Do regular reviews**: Periodically review assigned roles and permissions to ensure they align with your treasury's current needs
+* **Governance caution**: Exercise caution when assigning the Governance role, as this role has extensive control over the treasury's settings

@@ -1,9 +1,15 @@
 ---
 title: "Voting Rules"
-description: "When creating a treasury you will be able to setup the  for all requests in the treasury, this voting threshold is the  required for a proposal to be approved."
+description: "Keep your treasury secure through voting rules"
 ---
 
-![Creating Treasury](/images/governance/assets/images/creating-treasury-members-d8923b6b411e2b8f9cd5e9ff46e19ba6.png)
+When creating a treasury you will be able to setup the `Voting Threshold` for all requests in the treasury, this voting threshold represents the minimum number of approvals required for a proposal to be approved
+
+![Creating Treasury](/assets/docs/governance/creating-treasury-members.png)
+
+<Danger>
+Voting thresholds prevent any single member from acting alone. Proceed with caution when setting up voting thresholds
+</Danger>
 
 ***
 
@@ -11,11 +17,17 @@ description: "When creating a treasury you will be able to setup the  for all re
 
 Once the treasury is created, team members with the [Governance](/governance/members-and-roles#governance) role can present proposals to change the treasury's configuration, including its voting thresholds and voting period.
 
-![Creating Treasury](/images/governance/assets/images/voting-e25c7c8e381819d352b1477e9a5672dc.png)
+![Creating Treasury](/assets/docs/governance/voting.png)
 
-<Warning>
+<Info>
   Only members with the [Governance](/governance/members-and-roles#governance) role can create proposals to update the treasury's voting settings
-</Warning>
+</Info>
+
+<Danger>
+
+Governance proposals can change how decisions are made, thus having significant impact on the treasury's security and operations. Do not lower the governance threshold unless necessary. [Read More](./members-and-roles.mdx#governance-is-the-highest-trust-role)
+
+</Danger>
 
 ***
 
