@@ -14,8 +14,7 @@
         "group": "Getting Started",
         "pages": [
           "home",
-          "what-is",
-          "ledger"
+          "what-is"
         ]
       },
       {
@@ -27,17 +26,18 @@
         ]
       },
       {
-        "group": "Payments",
+        "group": "Finance",
         "pages": [
           "payments/single-payment",
           "payments/bulk-payment",
-          "payments/handling-requests"
+          "payments/handling-requests",
+          "swap"
         ]
       },
       {
-        "group": "Swap",
+        "group": "User Guides",
         "pages": [
-          "swap"
+          "ledger"
         ]
       }
     ]

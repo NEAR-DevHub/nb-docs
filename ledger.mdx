@@ -3,103 +3,83 @@ title: "Using a Ledger"
 description: "Learn how to set up and use a Ledger hardware wallet with Trezu on NEAR"
 ---
 
+Hardware wallets are one of the most secure ways to manage your account. While you do not need a hardware wallet to use Trezu, it is highly recommended to use one — especially for your most critical operational roles, such as `Finance` and `Governance`.
+
+<Tip>
+   Learn more on how to keep your treasury safe using a Ledger device in our [**blog post**](https://trezu.org/blog/how-to-use-ledger-hardware-wallet).
+</Tip>
+
+---
+
 ## Setting Up Ledger with NEAR
 
-1. Download and install [Ledger Live](https://www.ledger.com/ledger-live) on your computer.
-2. Connect your Ledger to your computer via USB.
-3. Open the **Ledger Live** application and ensure your device firmware is up to date.
-4. Install the **NEAR app** on your Ledger from the *App Catalog* in Ledger Live.
-5. Open the NEAR app on your Ledger device (the screen should display *Application is ready*).
+1. Download and install [Ledger Live](https://www.ledger.com/ledger-live)
+2. Connect your Ledger via USB or Bluetooth
+3. Open the **Ledger Live** application and ensure your device firmware is up to date
+4. In **Ledger Live**, install the **NEAR app** from the *App Catalog*
+5. Open the NEAR app on your Ledger device (the screen should display *Application is ready*)
 
 ![NEAR app installed in Ledger Live](/assets/docs/ledger/trezu-ledger-near-app.png)
-*NEAR app (v2.4.3) installed in Ledger Live*
+<p class="text-center text-xs">*NEAR app (v2.4.3) installed in Ledger Live*</p>
 
-Your wallet is now backed by your Ledger. All transaction signatures will require physical confirmation on the device.
-
----
-
-## 1. Logging In
-
-1. Click **Connect Wallet** in the top-right corner.
-2. Select your wallet (connected to your Ledger).
-3. If using Ledger, your device will prompt you to **confirm the connection** — approve it on the device.
-4. Select the account you want to use and **approve the selection on your Ledger device**.
-5. Enter your **Account ID**. If the account does not exist, Trezu will allow you to create it.
-6. You will be redirected to your dashboard once authenticated.
+Your Ledger is now set up, so you can readily use it to join a treasury in Trezu or create a new one.
 
 ---
 
-## 2. Creating a Treasury
+## 1. Log in to Trezu
 
-### Step 1 – Start a New Treasury
+Go to [trezu.app](https://trezu.app) and click **Login**
 
-1. From the dashboard, click **Create Treasury**.
-2. Enter a **Treasury Name** (e.g., `My DAO Treasury`).
-3. Click **Next**.
-
-![Start a new treasury](/assets/docs/ledger/create-step-1.png)
-
-### Step 2 – Add Members and Assign Roles
-
-In this example, we will set up a treasury with **4 members**:
-
-| Member          | Role         |
-| --------------- | ------------ |
-| Alice (you)     | Governance   |
-| Bob             | Governance   |
-| Carol           | Finance      |
-| Dave            | Requestor    |
-
-1. In the **Members** screen, add each member's wallet address.
-2. Assign [roles](/governance/members-and-roles) to each member:
-   - Set **Alice** and **Bob** as **Governance**.
-   - Set **Carol** as **Finance**.
-   - Set **Dave** as **Requestor**.
-3. Configure the **Voting Thresholds**:
-   - **Governance threshold**: `1` (one Governance member can approve configuration changes).
-   - **Finance threshold**: `1` (one Finance member can approve financial requests).
-4. Click **Create Treasury**.
-
-![Adding members during treasury creation](/assets/docs/ledger/create-step-2.png)
-*Adding 4 members with their respective roles*
-
-5. Your Ledger will prompt you to **confirm the transaction** — approve it on the device.
-6. Wait for the transaction to be confirmed on-chain. Once done, you will see your new treasury dashboard.
-
-![Treasury created successfully](/assets/docs/ledger/create-step-3.png)
-
-<Info>
-  Each member will need to connect with their own wallet to participate in the treasury. Make sure all members have access to their wallets before proceeding.
-</Info>
+1. Select the **Ledger** option
+2. Choose between **USB** or **Bluetooth** connection depending on your device
+3. Your device will prompt you to **confirm the connection** — approve it on the device
 
 ---
 
-## 3. Adding a New Governance Member via Proposal
+# 2. Select a Derivation Path
 
-Now that the treasury is set up, let's walk through adding a **third Governance member** (Eve) by creating and voting on a proposal.
+At this point, you will be prompted to select a `Derivation Path`, which determines which private key you want the Ledger to use when signing transactions in Trezu.
 
-### Step 1 – Create the Proposal
+![Derivation path selection](/assets/docs/ledger/derivation-path.png)
 
-Only members with the **Governance** role can propose membership changes.
+<Tip>
+ If you are **unsure** which one to select, do not worry—simply **select the first one** (`Account 1`).
+</Tip>
 
-1. Log in with a **Governance** account (e.g., Alice).
-2. Navigate to the **Members** section in the left sidebar.
-3. Click **Add Member**.
-4. Enter **Eve's wallet address**.
-5. Assign the **Governance** role to Eve.
-6. Click **Submit Proposal**.
-7. Your Ledger will prompt you to **sign the transaction** — approve it on the device.
-8. The proposal is now created and visible in the **Pending Requests** section.
+Approve the selection on your Ledger device before proceeding to the next step.
 
-### Step 2 – Vote on the Proposal
+---
 
-Since the Governance voting threshold is set to **1**, only one Governance member needs to approve the proposal.
+## 3. Select an Account
 
-1. Still logged in as **Alice**, go to Requests and open the Pending Requests tab.
-2. Find the proposal to add Eve.
-3. Click **Approve**.
-4. Your Ledger will prompt you to **confirm the vote** — approve it on the device.
+Now that you have selected which `private key` you want to use, it is time to manually enter the `account` you want to log in with:
 
-*Alice approving the proposal to add Eve*
+![AccountID Selection](/assets/docs/ledger/account-id.png)
 
-Once Alice approves, the proposal reaches the required threshold and is **automatically executed**, adding Eve as a new Governance member.
+You can either use the `implicit account` derived directly from the selected `derivation path`, or input any other `accountId` of your choice.
+
+After confirming, you will see one of the following outcomes:
+1. **Logged in successfully** — the account exists and matches the selected Ledger `private key`
+2. **Create account option** — the account does not exist yet, so you can create it immediately
+3. **Error message** — the account exists, but it is linked to a different Ledger `private key`
+
+<Tip>
+   To avoid key mismatch errors, use the same derivation path that was originally used with that `accountId`.
+</Tip>
+
+<Note>
+   **Advanced**
+
+   In NEAR, it is possible to add your Ledger `public key` to accounts that already exist; however, to do this you will need to use an external tool, such as the [NEAR CLI](https://docs.near.org/tools/near-cli).
+</Note>
+
+---
+
+## 4. You are in!
+
+That's it! You are now logged in to Trezu using your Ledger hardware wallet. Do not worry if you do **not have funds** in the account yet — Trezu sponsors creating the treasury, as well as interacting with proposals.
+
+You can simply use Trezu as you normally would, but now with the added security that all your actions will require physical confirmation on your Ledger device.
+
+Go ahead and [create a new treasury](https://trezu.app/app/new), or ask your team to add you as a member to an existing one!
+
