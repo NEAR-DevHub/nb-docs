@@ -14,7 +14,8 @@
         "group": "Getting Started",
         "pages": [
           "home",
-          "what-is"
+          "what-is",
+          "ledger"
         ]
       },
       {
