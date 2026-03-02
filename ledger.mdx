@@ -1,0 +1,105 @@
+---
+title: "Using a Ledger"
+description: "Learn how to set up and use a Ledger hardware wallet with Trezu on NEAR"
+---
+
+## Setting Up Ledger with NEAR
+
+1. Download and install [Ledger Live](https://www.ledger.com/ledger-live) on your computer.
+2. Connect your Ledger to your computer via USB.
+3. Open the **Ledger Live** application and ensure your device firmware is up to date.
+4. Install the **NEAR app** on your Ledger from the *App Catalog* in Ledger Live.
+5. Open the NEAR app on your Ledger device (the screen should display *Application is ready*).
+
+![NEAR app installed in Ledger Live](/assets/docs/ledger/trezu-ledger-near-app.png)
+*NEAR app (v2.4.3) installed in Ledger Live*
+
+Your wallet is now backed by your Ledger. All transaction signatures will require physical confirmation on the device.
+
+---
+
+## 1. Logging In
+
+1. Click **Connect Wallet** in the top-right corner.
+2. Select your wallet (connected to your Ledger).
+3. If using Ledger, your device will prompt you to **confirm the connection** — approve it on the device.
+4. Select the account you want to use and **approve the selection on your Ledger device**.
+5. Enter your **Account ID**. If the account does not exist, Trezu will allow you to create it.
+6. You will be redirected to your dashboard once authenticated.
+
+---
+
+## 2. Creating a Treasury
+
+### Step 1 – Start a New Treasury
+
+1. From the dashboard, click **Create Treasury**.
+2. Enter a **Treasury Name** (e.g., `My DAO Treasury`).
+3. Click **Next**.
+
+![Start a new treasury](/assets/docs/ledger/create-step-1.png)
+
+### Step 2 – Add Members and Assign Roles
+
+In this example, we will set up a treasury with **4 members**:
+
+| Member          | Role         |
+| --------------- | ------------ |
+| Alice (you)     | Governance   |
+| Bob             | Governance   |
+| Carol           | Finance      |
+| Dave            | Requestor    |
+
+1. In the **Members** screen, add each member's wallet address.
+2. Assign [roles](/governance/members-and-roles) to each member:
+   - Set **Alice** and **Bob** as **Governance**.
+   - Set **Carol** as **Finance**.
+   - Set **Dave** as **Requestor**.
+3. Configure the **Voting Thresholds**:
+   - **Governance threshold**: `1` (one Governance member can approve configuration changes).
+   - **Finance threshold**: `1` (one Finance member can approve financial requests).
+4. Click **Create Treasury**.
+
+![Adding members during treasury creation](/assets/docs/ledger/create-step-2.png)
+*Adding 4 members with their respective roles*
+
+5. Your Ledger will prompt you to **confirm the transaction** — approve it on the device.
+6. Wait for the transaction to be confirmed on-chain. Once done, you will see your new treasury dashboard.
+
+![Treasury created successfully](/assets/docs/ledger/create-step-3.png)
+
+<Info>
+  Each member will need to connect with their own wallet to participate in the treasury. Make sure all members have access to their wallets before proceeding.
+</Info>
+
+---
+
+## 3. Adding a New Governance Member via Proposal
+
+Now that the treasury is set up, let's walk through adding a **third Governance member** (Eve) by creating and voting on a proposal.
+
+### Step 1 – Create the Proposal
+
+Only members with the **Governance** role can propose membership changes.
+
+1. Log in with a **Governance** account (e.g., Alice).
+2. Navigate to the **Members** section in the left sidebar.
+3. Click **Add Member**.
+4. Enter **Eve's wallet address**.
+5. Assign the **Governance** role to Eve.
+6. Click **Submit Proposal**.
+7. Your Ledger will prompt you to **sign the transaction** — approve it on the device.
+8. The proposal is now created and visible in the **Pending Requests** section.
+
+### Step 2 – Vote on the Proposal
+
+Since the Governance voting threshold is set to **1**, only one Governance member needs to approve the proposal.
+
+1. Still logged in as **Alice**, go to Requests and open the Pending Requests tab.
+2. Find the proposal to add Eve.
+3. Click **Approve**.
+4. Your Ledger will prompt you to **confirm the vote** — approve it on the device.
+
+*Alice approving the proposal to add Eve*
+
+Once Alice approves, the proposal reaches the required threshold and is **automatically executed**, adding Eve as a new Governance member.
