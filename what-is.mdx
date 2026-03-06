@@ -17,14 +17,46 @@ More technically, a treasury is a multisig wallet, where each member controls th
 
 Treasuries can hold crypto assets on multiple chains, helping teams to manage all their funds from a **single platform**, thus **without needing to use multiple wallets**.
 
-<Columns cols={3}>
-  <Card title="All EVM Chains" img="/assets/docs/chains/ethereum.svg" />
-  <Card title="Bitcoin Networks" img="/assets/docs/chains/bitcoin.svg" />
+<Columns cols={4}>
+  <Card title="Ethereum" img="/assets/docs/chains/ethereum.svg" />
   <Card title="Solana" img="/assets/docs/chains/solana.svg" />
-  <Card title="NEAR Ecosystem" img="/assets/docs/chains/near.svg" />
-  <Card title="SUI" img="/assets/docs/chains/sui.svg" />
-  <Card title="Stellar, Tron, ..." img="/assets/docs/chains/stellar.svg" />
+  <Card title="Bitcoin" img="/assets/docs/chains/bitcoin.svg" />
+  <Card title="Polygon" img="/assets/docs/chains/polygon.svg" />
+  <Card title="NEAR" img="/assets/docs/chains/near-protocol.svg" />
+  <Card title="Sui" img="/assets/docs/chains/sui.svg" />
+  <Card title="TON" img="/assets/docs/chains/ton.svg" />
+  <Card title="Cardano" img="/assets/docs/chains/cardano.svg" />
 </Columns>
+
+<Accordion title="...and many more">
+
+<Columns cols={4}>
+  <Card title="ADI" img="/assets/docs/chains/adi.jpeg" />
+  <Card title="Aleo" img="/assets/docs/chains/aleo.png" />
+  <Card title="Arbitrum" img="/assets/docs/chains/arbitrum.svg" />
+  <Card title="Aurora" img="/assets/docs/chains/aurora.svg" />
+  <Card title="Avalanche" img="/assets/docs/chains/avalanche.svg" />
+  <Card title="Base" img="/assets/docs/chains/base.svg" />
+  <Card title="Bera" img="/assets/docs/chains/bera.svg" />
+  <Card title="BNB Chain" img="/assets/docs/chains/bnb.svg" />
+  <Card title="Bitcoin Cash" img="/assets/docs/chains/bitcoin-cash.svg" />
+  <Card title="Dash" img="/assets/docs/chains/dash.svg" />
+  <Card title="Dogecoin" img="/assets/docs/chains/dogecoin.svg" />
+  <Card title="Gnosis" img="/assets/docs/chains/gnosis.svg" />
+  <Card title="Litecoin" img="/assets/docs/chains/litecoin.svg" />
+  <Card title="Monad" img="/assets/docs/chains/monad.svg" />
+  <Card title="Optimism" img="/assets/docs/chains/optimism.svg" />
+  <Card title="Plasma" img="/assets/docs/chains/plasma.svg" />
+  <Card title="Scroll" img="/assets/docs/chains/scroll.svg" />
+  <Card title="Starknet" img="/assets/docs/chains/starknet.svg" />
+  <Card title="Stellar" img="/assets/docs/chains/stellar.svg" />
+  <Card title="Tron" img="/assets/docs/chains/tron.svg" />
+  <Card title="XLayer" img="/assets/docs/chains/x-layer.svg" />
+  <Card title="XRP" img="/assets/docs/chains/xrp.svg" />
+  <Card title="Zcash" img="/assets/docs/chains/zcash.svg" />
+</Columns>
+
+</Accordion>
 
 New chains and assets are being added regularly, so if you don't see a specific chain or asset supported, please reach out to us and let us know!
 
@@ -70,6 +102,32 @@ Treasury security in Trezu is enforced through three mechanisms:
 1. **Multiple members** – actions require approvals from more than one wallet
 2. **Roles** – limit what actions each wallet can perform
 3. **Voting thresholds** – define how many approvals are required for an action to be executed
+
+***
+
+## Frequently Asked Questions
+
+<Accordion title="Do I need to deposit funds to use a treasury?">
+  A treasury is a wallet on its own, so you would need to deposit funds into the treasury to be able to use them.
+
+  Once the funds are in the treasury, they can be managed by the team according to the defined roles and voting rules.
+</Accordion>
+
+<Accordion title="Who holds the funds I deposited?">
+  Your funds are held by the treasury, which is a multisig wallet smart contract on NEAR.
+
+  The treasury is controlled by your team members through governance. The Trezu team does not custody your keys or funds, nor has any kind of access to them.
+</Accordion>
+
+<Accordion title="What happens if Trezu goes down? How can I access my funds?">
+  Your funds remain on-chain and under the treasury control. Team members can use alternative interfaces or command-line tooling to keep managing the treasury.
+</Accordion>
+
+<Accordion title="Can I import an existing treasury?">
+  If you previously created a `.sputnikdao.near` DAO, just sign in with the same account that created it and your treasury will be there, ready to use.
+
+  For other treasury types, we do not currently offer a migration tool. Feel free to contact us so we can discuss your specific case and see how we can help.
+</Accordion>
 
 ***
 
