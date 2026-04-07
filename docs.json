@@ -42,6 +42,11 @@
       }
     ]
   },
+  "integrations": {
+    "ga4": {
+      "measurementId": "G-2C9N5N93N5"
+    }
+  },
   "logo": {
     "light": "/assets/menu/logo-light.svg",
     "dark": "/assets/menu/logo-dark.svg"
