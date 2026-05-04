@@ -1,0 +1,113 @@
+---
+title: "Confidential Treasuries"
+description: "Manage assets and payroll without exposing your financial data"
+---
+
+At Trezu, we understand that some teams need to manage their crypto assets securely, but do not want to expose their financial data publicly. To help them, we have built **confidential treasuries**, a new type of treasury where all financial data **is only visible** to the **team members**.
+
+<img src="/assets/docs/confidential/ui.png" alt="Confidential Treasuries" />
+
+<Tip>
+  All transactions and actions on a confidential treasury are private, if you need to handle public funds, or want to make your transactions public, you will need to use a public treasury instead.
+</Tip>
+
+***
+
+## How do confidential treasuries work?
+
+Confidential treasuries are built on top of the same core technology as public treasuries, meaning they are a multisig wallet smart contract deployed on NEAR Protocol. 
+
+<img src="/assets/docs/confidential/diagram.png" alt="Confidential Treasuries" />
+
+The main difference is that confidential treasuries are deployed on a **private shard** on NEAR. This allows us to use all the same technology securing public treasuries, while keeping all financial data away from the public's eyes.
+
+<Accordion title="What is a private shard?">
+  While NEAR Protocol is a single blockchain, it is actually composed of multiple small chain instances called shards, which run in parallel. Each shard is in charge of certain accounts and smart contracts, and operate in parallel, aggregating all together to form the NEAR blockchain.
+
+  In NEAR, all shards are public by default, which means that anyone can see all the funds and transactions happening on them. However, NEAR also allows the creation of private shards, which run on the same technology as the public ones, but with the main difference of **not exposing any data to the public**. This makes private shards an ideal solution for confidential treasuries, as they provide all the security and functionality of a public shard, but with the added privacy of not exposing any financial data to the public.
+</Accordion>
+
+***
+
+## Public vs Confidential treasuries
+
+Confidential treasures share all the core features as public treasuries, such as multi-member management, and a secure proposal and voting system. The key difference is in how funds are handled. 
+
+| Feature                                        | Public Treasuries                    | Confidential Treasuries                                      |
+|------------------------------------------------|-------------------------------------------|--------------------------------------------------------------|
+| Member List                                    | 🌐 Visible to anyone                      | 🌐 Visible to anyone                                         |
+| Members votes on a proposal                    | 🌐 Visible to anyone                      | 🌐 Visible to anyone                                         |
+| Treasury balances                              | 🌐 Visible to anyone                      | 🔒 Visible only to the team                                  |
+| Proposals                                      | 🌐 Proposals and their content are public | 🔒 Only the team can see the proposal's content (see bellow) |
+| View payment requests (current and historical) | 🌐 Visible to anyone                      | 🔒 Visible only to the team                                  |
+| Swap requests (current and historical)         | 🌐 Visible to anyone                      | 🔒 Visible only to the team                                  |
+| Deposits and Payments                          | 🌐 Made on the public blockchain          | 🔒 Deposits are handled through near.com (see bellow)        |
+
+
+### Deposits & Payments
+Since confidential treasuries are deployed on a private shard, they cannot receive funds through regular blockchain transactions, as these are public by nature.
+
+Instead, to fund a confidential treasury, team members need to go through [near.com](https://near.com/) and make a transfer to the treasury's account.
+
+
+### Proposals
+
+Anyone can publicly see that a proposal was created and what members voted on it, but **only team members** can see the **actual content** of the proposal.
+
+For example, if a team member creates a payment proposal to pay `10 USDC` to `alice.near`, anyone can see that a payment proposal was created and how members voted on it, but only team members can see the details of the proposal, such as the amount, recipient, or token.
+
+***
+
+## Frequently Asked Questions
+
+<Accordion title="Can I create a treasury that is both public and confidential?">
+  No, when creating a treasury you need to choose whether you want it to be public or confidential, as this will determine how the treasury is deployed and how it handles funds.
+
+  If you want to have some of your funds and transactions to be public and others to be private, we recommend creating two separate treasuries, one public and one confidential, and manage your funds accordingly.
+</Accordion>
+
+<Accordion title="A Private Shard on NEAR?">
+
+While NEAR Protocol is a single blockchain, it is actually composed of multiple small chain instances called shards, which run in parallel. Each shard is in charge of certain accounts and smart contracts, and operate in parallel, aggregating all together to form the NEAR blockchain.
+
+Almost all shards on NEAR are public, which means that anyone can see all the funds and transactions happening on them. However, NEAR also allows the creation of private shards, which run on the same technology as the public ones, but with the added security of being private and encrypted. 
+
+This is how confidential treasuries work - they are deployed on their own private shard, which is not accessible to anyone outside of the team, thus keeping all financial data private.
+
+</Accordion>
+
+<Accordion title="How do I fund a confidential treasury?">
+
+To deposit funds into a confidential treasury, you will need to go through [**near.com**](https://near.com/) - a portal through which you can deposit assets into the private shard - and make a transfer to the treasury's account. You can find the treasury's account ID in the **Settings** section of your treasury
+
+We have a detailed guide on how to fund a confidential treasury in the [**Funding Confidential Treasuries guide**](/guides/funding-confidential-treasuries).
+
+</Accordion>
+
+<Accordion title="Are payments from a confidential treasury private?">
+
+Yes, all payments from a confidential treasury are private, as they are executed within the private shard. This means that the details of the payment, such as the amount, recipient, and token, are only visible to team members and not to the public.
+
+Recipients of confidential payments will receive the funds in a [near.com](https://near.com/) account, and they will need to log in to [near.com](https://near.com/) to access and withdraw the funds.
+
+We have a detailed guide on how to receive and withdraw confidential payments in the [**Receiving Confidential Payments guide**](/guides/confidential-payments).
+
+</Accordion>
+
+<Accordion title="Are swaps from a confidential treasury private?">
+
+Yes, all swaps from a confidential treasury are private, as they are executed within the private shard. This means that the details of the swap, such as the amount, tokens involved, and exchange rate, are only visible to team members and not to the public.
+
+</Accordion>
+
+<Accordion title="Can I still connect with my Ledger?">
+  Yes, you can still connect with your Ledger wallet to manage a confidential treasury. The process of connecting your wallet and signing transactions is the same as with a public treasury, as both types of treasuries are built on the same core technology.
+
+  The main difference is that with a confidential treasury, all transactions and actions are executed within the private shard, so while you can use your Ledger to sign transactions, the details of those transactions will not be visible to the public.
+</Accordion>
+
+***
+
+## Ready to get started?[​](#ready-to-get-started "Direct link to Ready to get started?")
+
+[Create your treasury now](https://trezu.app/) and start managing your team's crypto assets securely and collaboratively!

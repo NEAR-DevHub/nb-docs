@@ -8,13 +8,20 @@
     "dark": "#0D9373"
   },
   "favicon": "assets/favicon.svg",
+  "redirects": [
+    {
+      "source": "/ledger",
+      "destination": "/guides/ledger"
+    }
+  ],
   "navigation": {
     "groups": [
       {
         "group": "Getting Started",
         "pages": [
           "home",
-          "what-is"
+          "what-is",
+          "confidential-treasuries"
         ]
       },
       {
@@ -37,7 +44,9 @@
       {
         "group": "User Guides",
         "pages": [
-          "ledger"
+          "guides/ledger",
+          "guides/funding-confidential-treasuries",
+          "guides/confidential-payments"
         ]
       }
     ]
