@@ -4,7 +4,8 @@
   "name": "Trezu Docs",
   "colors": {
     "primary": "#0953FF",
-    "light": "#7EA3FB"
+    "light": "#7EA3FB",
+    "dark": "#257be9"
   },
   "favicon": "assets/favicon.svg",
   "redirects": [
@@ -13,6 +14,14 @@
       "destination": "/guides/ledger"
     }
   ],
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "href": "https://trezu.app",
+      "label": "Go to App",
+      "icon": "external-link"
+    }
+  },
   "navigation": {
     "groups": [
       {
@@ -47,8 +56,8 @@
           {
             "group": "Confidential Treasuries",
             "pages": [
-             "guides/funding-confidential-treasuries",
-             "guides/confidential-payments"
+              "guides/funding-confidential-treasuries",
+              "guides/confidential-payments"
             ]
           }
         ]
