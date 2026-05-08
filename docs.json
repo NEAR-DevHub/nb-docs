@@ -45,8 +45,13 @@
         "group": "User Guides",
         "pages": [
           "guides/ledger",
-          "guides/funding-confidential-treasuries",
-          "guides/confidential-payments"
+          {
+            "group": "Confidential Treasuries",
+            "pages": [
+             "guides/funding-confidential-treasuries",
+             "guides/confidential-payments"
+            ]
+          }
         ]
       }
     ]

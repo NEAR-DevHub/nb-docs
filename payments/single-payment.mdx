@@ -32,15 +32,11 @@ Navigate to the **`Payments`** section in the left sidebar, then simply fill in 
 
 ### 🔒 Private Treasuries
 
-On [confidential treasuries](/confidential-treasuries), payments are sent to [near.com](https://near.com/) accounts rather than directly to public wallet addresses.
+[Confidential treasuries](/confidential-treasuries) can create payments to [near.com](https://near.com/) accounts, or directly to public wallet addresses.
 
-This is because confidential payments are executed within a private shard, so the funds are credited to an internal [near.com](https://near.com/) account instead of being sent through public blockchains.
+Payments sent to [near.com](https://near.com/) accounts are private, as the recipient will need to [log in to near.com](/guides/confidential-payments) to access and withdraw the funds. In that case, the sender will appear as the confidential treasury's account on [near.com](https://near.com/).
 
-You can still create payments in **any supported token**, but the recipient will need to log in to [near.com](https://near.com/) to [access and withdraw the payment](/guides/confidential-payments).
-
-<Tip>
-  You can share our [guide on receiving confidential payments](/guides/confidential-payments) with the recipient to help them access and withdraw the funds.
-</Tip>
+Payments sent directly to public wallet addresses are also private, as they are executed within the private shard. However, in that case, the sender will be the near.com settlement account, as the funds are bridged from the private shard to the public one before being sent to the recipient.
 
 ***
 
