@@ -23,6 +23,8 @@ You will need to specify in which token you want to pay the recipients - all rec
 
 ![Bulk Payment Request](/assets/docs/payments/bulk-payment-request.png)
 
+<br />
+
 <Accordion title="Bulk Payment Format">
   The expected format is a list of recipients with their wallet address and the amount to be paid, e.g. if we want to pay `10.50 USDC` to `alice.near` and `21.34 USDC` to `bob.near`, you can manually provide the payment data in the **Provide Data** section as follows:
 
@@ -31,7 +33,7 @@ You will need to specify in which token you want to pay the recipients - all rec
   bob.near, 21.34
   ```
 
-  Or download our [template](https://raw.githubusercontent.com/NEAR-DevHub/trezu-docs/refs/heads/main/assets/files/bulk-payment-template.csv) and fill in the payment details, then upload the file in the **Upload File** section.
+  Or download our <a href="https://raw.githubusercontent.com/NEAR-DevHub/trezu-docs/refs/heads/main/assets/files/bulk-payment-template.csv" onClick={(e) => { e.preventDefault(); fetch(e.currentTarget.href).then(r => r.blob()).then(b => { const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = 'bulk-payment-template.csv'; a.click(); URL.revokeObjectURL(a.href); }); }}>template</a> and fill in the payment details, then upload the file in the **Upload File** section.
 </Accordion>
 
 ***
