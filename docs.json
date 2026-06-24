@@ -23,6 +23,15 @@
     }
   },
   "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "System Status",
+          "icon": "signal",
+          "href": "https://status.trezu.org/"
+        }
+      ]
+    },
     "groups": [
       {
         "group": "Getting Started",
