@@ -55,6 +55,7 @@
           "payments/single-payment",
           "payments/bulk-payment",
           "payments/handling-requests",
+          "payments/receipts",
           "swap"
         ]
       },
