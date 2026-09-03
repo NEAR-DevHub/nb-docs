@@ -1,5 +1,5 @@
 ---
-title: "Funding through near.com"
+title: "Funding Through near.com"
 description: "Learn how to fund a confidential treasury using near.com"
 ---
 
@@ -8,71 +8,51 @@ description: "Learn how to fund a confidential treasury using near.com"
 For teams that want to manage the bridging process themselves, this guide explains how to fund a confidential treasury through [near.com](https://near.com/).
 
 <Tip>
-If you do not want to interact with [near.com](https://near.com/) or manage private accounts, Trezu can handle the bridging process for you automatically.
+If you do not want to interact with [near.com](https://near.com/) or manage private accounts, you can use the automatic bridging flow in NEAR Business.
 
-Simply use the `Deposit` button in your confidential treasury's dashboard to generate a temporary deposit address, then send the funds from any external wallet to that address.
+Simply use the `Receive` button in your confidential treasury's dashboard to generate a temporary deposit address, then send the funds from any external wallet to that address.
 
 Remember that temporary deposit addresses are single-use and remain valid for 72 hours, so make sure to create a new one if the address expires before you send the funds.
 </Tip>
 
 ---
 
-## Moving Funds into near.com
+## Get Your Address
 
-Navigate to [near.com](https://near.com/) and connect with any of the supported wallets. Once connected, you will see the main dashboard where you can deposit and manage your assets.
+Click in `Receive` in your confidential treasury's [dashboard](https://business.near.com/), and then select "From confidential user".
 
-![near.com dashboard](/assets/docs/confidential/near-com.png)
+![Near Business Receive](/assets/docs/confidential/nb-receive.png)
 
-Use the `Receive` option to deposit funds into your main [near.com](https://near.com/) balance.
+You will see a deposit address for your confidential treasury. Copy this address, as you will need it to send funds from your `near.com` account.
 
-![Receive funds screen](/assets/docs/confidential/near-com-receive.png)
-
-In this example, we want to deposit some USDC from the NEAR wallet we used to log in, so we will select "Wallet or Exchange" as the source and deposit directly from that wallet.
-
-<Check>
-   `near.com` allows you to log in with multiple wallets across different chains and supports multiple popular assets.
-   
-   You can also deposit funds into your `near.com` by direct transfer from any external wallet.
-</Check>
-
-![Deposit funds screen](/assets/docs/confidential/near-com-receive-wallet-exchange.png)
+![Near Business Address](/assets/docs/confidential/nb-private-address.png)
 
 ---
 
-## Transferring Funds to the Confidential Treasury
+## Deposit Funds in near.com
 
-Now that the funds are in your main `near.com` balance, the next step is to move them into your confidential balance.
+Navigate to [near.com](https://near.com/) and connect with any of the supported wallets. Once connected, you will see the main dashboard where you can deposit and manage your assets.
 
-Use the top-left switch to enable confidential mode, then click `Transfer`. This moves the funds from your main `near.com` balance to your confidential `near.com` balance.
+Use the `Receive` option to deposit funds into your account. You can deposit from any external wallet.
 
-![confidential mode enabled](/assets/docs/confidential/near-com-confidential.png)
+![Receive funds screen](/assets/docs/confidential/near-com-receive.png)
 
-Select `To Confidential`, then choose which token and how much of it you want to transfer into your confidential balance.
+<Check>
+   `near.com` allows you to log in with multiple wallets across different chains and supports multiple popular assets.
+</Check>
 
-![Transfer to confidential account](/assets/docs/confidential/near-com-to-confidential.png)
+---
 
-Once that transfer is complete, go back to the home screen and send the funds to the treasury. Click `Send` and select **another near.com account** as the destination.
+## Transferring to the Treasury
+
+Once that deposit is complete, go back to the home screen and send the funds to the treasury. Click `Send` and select **another near.com account** as the **network destination**. 
 
 ![Sending funds to another near.com account](/assets/docs/confidential/near-com-another-near-account.png)
+
+Select the token you want to send and enter the treasury's account ID as the destination. Once it completes, you will see the funds in your confidential treasury's [dashboard](https://business.near.com), ready to use for payments and swaps.
 
 <Danger>
    As [confidential treasuries](/confidential-treasuries) are deployed on `near.com`'s private shards, they are effectively `near.com` accounts.
    
-   Make sure to select **another near.com account** on the `Send` screen. If you send the funds anywhere else, they will not arrive in the confidential treasury.
+   Make sure to select **another near.com account** on the `Send` screen. Funds sent to other networks might be lost, and there is no way to recover them.
 </Danger>
-
-Select the token you want to send and enter the treasury's account ID as the destination. You can find the treasury's account ID by using the `Deposit` button in your private treasury's [dashboard](https://trezu.app/).
-
-![getting address from trezu](/assets/docs/confidential/trezu-address.png)
-
-<Tip>
-   Make sure to copy the correct account ID, remember that confidential treasuries can only receive funds from `near.com` accounts.
-</Tip>
-
-Confirm the transfer. Once it completes, you will see the funds in your confidential treasury's [dashboard](https://trezu.app), ready to use for payments and swaps.
-
-![deposit completed](/assets/docs/confidential/near-com-deposit-done.png)
-
-At this point, the treasury is funded and ready for confidential payment and swap proposals.
-
-![confidential treasury dashboard](/assets/docs/confidential/trezu-funded.png)

@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "aspen",
-  "name": "Trezu Docs",
+  "name": "NEAR Business Docs",
   "colors": {
-    "primary": "#0953FF",
-    "light": "#7EA3FB",
-    "dark": "#257be9"
+    "primary": "#007A4D",
+    "light": "#00EC97",
+    "dark": "#006B43"
   },
   "favicon": "assets/favicon.svg",
   "redirects": [
@@ -17,7 +17,7 @@
   "navbar": {
     "primary": {
       "type": "button",
-      "href": "https://trezu.app",
+      "href": "https://business.near.com",
       "label": "Go to App",
       "icon": "external-link"
     }
@@ -62,13 +62,8 @@
         "group": "User Guides",
         "pages": [
           "guides/ledger",
-          {
-            "group": "Confidential Treasuries",
-            "pages": [
-              "guides/funding-confidential-treasuries",
-              "guides/confidential-payments"
-            ]
-          }
+          "guides/funding-confidential-treasuries",
+          "guides/confidential-payments"
         ]
       }
     ]

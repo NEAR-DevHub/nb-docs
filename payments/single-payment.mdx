@@ -16,6 +16,17 @@ The treasury funds can be used to send payments to an external account. You can 
 
 ***
 
+## 🔒 Private Payments
+
+Treasuries can create payments to [near.com](https://near.com/) accounts, or directly to public wallet addresses. Both types of payments are executed within the private shard, so they are inherently private.
+
+Payments sent to [near.com](https://near.com/) accounts will require the recipient to to [log in to near.com](/guides/confidential-payments) to access and withdraw the funds. In this case, the sender will appear as the confidential treasury's account on [near.com](https://near.com/).
+
+Payments sent directly to public wallet addresses are executed within the private shard also. In this case, the recipient will see the funds come from the near.com settlement account, as the funds are bridged from the private shard to the public one before being sent to the recipient.
+
+
+***
+
 ## Requesting a Payment
 
 Navigate to the **`Payments`** section in the left sidebar, then simply fill in the required details: the recipient's **wallet address**, the **token** and **amount** you want to send, and the recipient's **network**.
@@ -29,14 +40,6 @@ Navigate to the **`Payments`** section in the left sidebar, then simply fill in 
 <Note>
   Use the [Address Book](#address-book) to save frequently used wallet addresses and easily select them when creating payment requests
 </Note>
-
-### 🔒 Private Treasuries
-
-[Confidential treasuries](/confidential-treasuries) can create payments to [near.com](https://near.com/) accounts, or directly to public wallet addresses.
-
-Payments sent to [near.com](https://near.com/) accounts are private, as the recipient will need to [log in to near.com](/guides/confidential-payments) to access and withdraw the funds. In that case, the sender will appear as the confidential treasury's account on [near.com](https://near.com/).
-
-Payments sent directly to public wallet addresses are also private, as they are executed within the private shard. However, in that case, the sender will be the near.com settlement account, as the funds are bridged from the private shard to the public one before being sent to the recipient.
 
 ***
 
@@ -60,7 +63,7 @@ After the payment is approved and executed, you can generate a [receipt](/paymen
 
 ## Address Book
 
-Trezu allows you to save frequently used wallet addresses in an address book, making it easier to select the correct recipient when creating payment requests.
+The address book lets you save frequently used wallet addresses, making it easier to select the correct recipient when creating payment requests.
 
 ![Address Book](/assets/docs/payments/address-book.png)
 
