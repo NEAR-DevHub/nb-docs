@@ -11,43 +11,41 @@ This is especially useful when you need to pay a large number of recipients with
   Payment requests can only be created by team members with the [Requestor](/governance/members-and-roles#requestor) role, and they require approval from team members with the [Finance](/governance/members-and-roles#finance) role before they can be executed.
 </Warning>
 
-***
+---
 
 ## Bulk Payment Request
 
 Navigate to the **`Payments`** section in the left sidebar, then click **`Bulk Payments`**.
 
-![Bulk Payment Button](/assets/docs/payments/bulk-payment-button.webp)
+![Bulk payment button](/assets/docs/payments/bulk-payment-button.webp)
 
-You will need to specify in which token you want to pay the recipients - all recipients will be paid in the same token. Then, you will need to manually enter the payment details for each recipient or upload a `.csv` file with the information.
+Specify which token you want to use—all recipients will be paid in the same token. Then, manually enter the payment details for each recipient or upload a `.csv` file containing the information.
 
-![Bulk Payment Request](/assets/docs/payments/bulk-payment-request.webp)
+![Bulk payment request form](/assets/docs/payments/bulk-payment-request.webp)
 
 <br />
 
 <Accordion title="Bulk Payment Format">
-  The expected format is a list of recipients with their wallet address and the amount to be paid, e.g. if we want to pay `10.50 USDC` to `alice.near` and `21.34 USDC` to `bob.near`, you can manually provide the payment data in the **Provide Data** section as follows:
+  The expected format is a list of recipients with their wallet addresses and payment amounts. For example, to pay `10.50 USDC` to `alice.near` and `21.34 USDC` to `bob.near`, enter the following data in the **`Provide Data`** section:
 
   ```
   alice.near, 10.50
   bob.near, 21.34
   ```
 
-  Or download our <a href="https://raw.githubusercontent.com/NEAR-DevHub/trezu-docs/refs/heads/main/assets/files/bulk-payment-template.csv" onClick={(e) => { e.preventDefault(); fetch(e.currentTarget.href).then(r => r.blob()).then(b => { const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = 'bulk-payment-template.csv'; a.click(); URL.revokeObjectURL(a.href); }); }}>template</a> and fill in the payment details, then upload the file in the **Upload File** section.
+  Alternatively, download our <a href="https://raw.githubusercontent.com/NEAR-DevHub/trezu-docs/refs/heads/main/assets/files/bulk-payment-template.csv" onClick={(e) => { e.preventDefault(); fetch(e.currentTarget.href).then(r => r.blob()).then(b => { const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = 'bulk-payment-template.csv'; a.click(); URL.revokeObjectURL(a.href); }); }}>template</a>, fill in the payment details, and upload the file in the **`Upload File`** section.
 </Accordion>
 
-***
+---
 
 ## Reviewing the Request
 
 Make sure to review the bulk payment request before submitting it. You can also add a comment to provide more context to the approvers.
 
-![Bulk Payment Review](/assets/docs/payments/bulk-payment-review.webp)
+![Bulk payment review](/assets/docs/payments/bulk-payment-review.webp)
 
 <Tip>
-
-After the bulk payment is approved and executed, you will be able to produce a [receipt](/payments/handling-requests).
-
+  After the bulk payment is approved and executed, you can generate a [receipt](/payments/handling-requests).
 </Tip>
 
 
@@ -55,11 +53,11 @@ After the bulk payment is approved and executed, you will be able to produce a [
   Make sure to select the right blockchain and enter the correct wallet addresses, as payments are irreversible.
 </Warning>
 
-***
+---
 
 ## What's Next?
 
-After submitting the payment request, it will be ready for the [Finance](/governance/members-and-roles#finance) team members to review and vote on the request.
+After submitting the payment request, it will be ready for team members with the [Finance](/governance/members-and-roles#finance) role to review and vote on.
 
 <Check>
   Head to [Handling Payment Requests](/payments/handling-requests) to learn how to review and vote on payment requests.

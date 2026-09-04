@@ -3,8 +3,7 @@ title: "Proposing a Payment"
 description: "Request a payment to an external account"
 ---
 
-The treasury funds can be used to send payments to an external account. You can request payments to any wallet address on any blockchain, even if the treasury does not have the required tokens to cover the payment - your team can top up the treasury with the required tokens later on.
-
+The treasury funds can be used to send payments to an external account. You can request payments to any wallet address on any blockchain, even if the treasury does not have the required tokens to cover the payment—your team can top up the treasury with the required tokens later.
 
 <Check>
   Need to request multiple payments at once? Check the [Proposing Multiple Payments](/payments/bulk-payment) section.
@@ -14,52 +13,50 @@ The treasury funds can be used to send payments to an external account. You can 
   Payment requests can only be created by team members with the [Requestor](/governance/members-and-roles#requestor) role, and they require approval from team members with the [Finance](/governance/members-and-roles#finance) role before they can be executed.
 </Warning>
 
-***
+---
 
 ## 🔒 Private Payments
 
 Treasuries can create payments to [near.com](https://near.com/) accounts, or directly to public wallet addresses. Both types of payments are executed within the private shard, so they are inherently private.
 
-Payments sent to [near.com](https://near.com/) accounts will require the recipient to to [log in to near.com](/guides/confidential-payments) to access and withdraw the funds. In this case, the sender will appear as the confidential treasury's account on [near.com](https://near.com/).
+Payments sent to [near.com](https://near.com/) accounts require the recipient to [log in to near.com](/guides/confidential-payments) to access and withdraw the funds. In this case, the sender appears as the confidential treasury's account on [near.com](https://near.com/).
 
-Payments sent directly to public wallet addresses are executed within the private shard also. In this case, the recipient will see the funds come from the near.com settlement account, as the funds are bridged from the private shard to the public one before being sent to the recipient.
+Payments sent directly to public wallet addresses are also executed within the private shard. In this case, the recipient sees the funds come from the near.com settlement account because they are bridged from the private shard to the public one before being sent to the recipient.
 
 
-***
+---
 
 ## Requesting a Payment
 
-Navigate to the **`Payments`** section in the left sidebar, then simply fill in the required details: the recipient's **wallet address**, the **token** and **amount** you want to send, and the recipient's **network**.
+Navigate to the **`Payments`** section in the left sidebar, then enter the required details: the recipient's **wallet address**, the **token** and **amount** you want to send, and the recipient's **network**.
 
-![Payments Screen](/assets/docs/payments/single-payment.webp)
+![Payment request form](/assets/docs/payments/single-payment.webp)
 
 <Check>
-  You can create a payment request even if the treasury does not have the necessary tokens. This allows you to request payments, and the team can top-up the treasury with the required tokens later on.
+  You can create a payment request even if the treasury does not have the necessary tokens. This allows you to request payments, and the team can top up the treasury with the required tokens later.
 </Check>
 
 <Note>
-  Use the [Address Book](#address-book) to save frequently used wallet addresses and easily select them when creating payment requests
+  Use the [Address Book](#address-book) to save frequently used wallet addresses and easily select them when creating payment requests.
 </Note>
 
-***
+---
 
 ## Reviewing the Payment Request
 
 After filling in the payment details, you can review the payment request before submitting it. Feel free to add a comment to the payment to provide more context to the approvers.
 
-![Review Payment](/assets/docs/payments/single-payment-review.webp)
+![Payment request review](/assets/docs/payments/single-payment-review.webp)
 
 <Tip>
-
-After the payment is approved and executed, you can generate a [receipt](/payments/handling-requests).
-
+  After the payment is approved and executed, you can generate a [receipt](/payments/handling-requests).
 </Tip>
 
 <Warning>
   Make sure to select the right blockchain and enter the correct wallet address, as payments are irreversible.
 </Warning>
 
-***
+---
 
 ## Address Book
 
@@ -68,12 +65,12 @@ The address book lets you save frequently used wallet addresses, making it easie
 ![Address Book](/assets/docs/payments/address-book.webp)
 
 <Tip>
-  Addresses can be linked to multiple blockchains, so you can save a recipient's wallet address once and use it for payments across different networks
+  Addresses can be linked to multiple blockchains, so you can save a recipient's wallet address once and use it for payments across different networks.
 </Tip>
 
-Simply navigate to the **`Address Book`** section in the left sidebar, then click on **`Add Recipient`** to save a new wallet address.
+Navigate to the **`Address Book`** section in the left sidebar, then click **`Add Recipient`** to save a new wallet address.
 
-***
+---
 
 ## Frequently Asked Questions
 
@@ -89,7 +86,7 @@ Here is a list of frequently asked questions about creating payment requests. If
   Always double-check the wallet address before submitting the payment request to avoid any mistakes.
 </Accordion>
 
-***
+---
 
 ## What's Next?
 

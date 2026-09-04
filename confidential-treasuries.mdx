@@ -6,27 +6,26 @@ description: "Manage assets and payroll without exposing your financial data"
 NEAR Business treasuries are **confidential**, meaning all financial data is
 **visible only to team members**: all transactions and actions remain private.
 
-<img src="/assets/docs/confidential/ui.png" alt="Confidential Treasuries" />
+<img src="/assets/docs/confidential/ui.png" alt="Confidential treasury interface" />
 
-***
+---
 
-## How do confidential treasuries work?
+## How Do Confidential Treasuries Work?
 
-Confidential treasuries are multisig wallet smart contracts deployed on a **private shard** on NEAR Protocol. This allows us to use technology similar to that securing public treasuries in NEAR, 
-while keeping all financial data away from the public's eyes.
+Confidential treasuries are multisig wallet smart contracts deployed on a **private shard** on NEAR Protocol. This allows us to use technology similar to that securing public treasuries on NEAR while keeping all financial data out of public view.
 
-<img src="/assets/docs/confidential/diagram.png" alt="Confidential Treasuries" />
+<img src="/assets/docs/confidential/diagram.png" alt="Confidential treasury architecture" />
 
 
 <Accordion title="What is a private shard?">
   While NEAR Protocol is a single blockchain, it is actually composed of small chain instances called shards. Each shard executes in parallel, handling transactions for a set of accounts and contracts.
 
   In NEAR, all shards are public by default, meaning that anyone can see all their transactions. However, NEAR allows having private shards, which use the same technology as the public ones, but with the main difference of **not exposing any data to the public**.
-  
+
   This makes private shards an ideal solution for confidential treasuries, as they provide all the security and functionality of a public shard, but with the added privacy of not exposing any financial data to the public.
 </Accordion>
 
-***
+---
 
 ## Deposits
 
@@ -38,11 +37,11 @@ There are two ways to do this, depending on how your team wants to operate.
 
 ### Automatic Bridging
 
-Your treasury can receive public funds on a temporary account and automatically bridge them to the private. This allows you to fund your treasury from any external wallet just as you would with a public treasury.
+Your treasury can receive public funds through a temporary account and automatically bridge them to the private shard. This allows you to fund your treasury from any external wallet just as you would with a public treasury.
 
 Furthermore, using a unique deposit address for each transfer makes it harder for external observers to link multiple deposits, wallets, or counterparties to the same treasury, which provides additional privacy.
 
-![deposit through temporary address](/assets/docs/confidential/single-use-address.webp)
+![Deposit through a temporary address](/assets/docs/confidential/single-use-address.webp)
 
 <Warning>
   Temporary deposit addresses are single-use and remain valid for 72 hours. If the address expires, create a new one before sending funds.
@@ -56,10 +55,10 @@ Furthermore, using a unique deposit address for each transfer makes it harder fo
 If your team already uses a confidential account on [near.com](https://near.com/), you can fund the treasury by transferring assets directly to the treasury account ID.
 
 <Tip>
-We have detailed guides on how to [**fund confidential treasuries through near.com**](/guides/funding-confidential-treasuries).
+  Read our detailed guide on how to [**fund confidential treasuries through near.com**](/guides/funding-confidential-treasuries).
 </Tip>
 
-***
+---
 
 ## Proposals
 
@@ -70,11 +69,11 @@ For example, if a team member creates a proposal to pay `10 USDC` to `alice.near
 that a proposal was created and whether it was approved or rejected, but **only team members can see**
 that it was a *payment* proposal, as well as **the amount, token, and recipient**.
 
-***
+---
 
 ## Payments
 
-Confidential treasuries can create payments in all supported assets, and the recipient can be **either** a **confidential [near.com](https://near.com/) account** or a **public wallet** addresses.
+Confidential treasuries can create payments in all supported assets, and the recipient can be **either** a **confidential [near.com](https://near.com/) account** or a **public wallet address**.
 
 Payments to [near.com](https://near.com/) confidential accounts will be executed within the private shard, so the recipient will need to log in to [near.com](https://near.com/) to access and withdraw the funds.
 
@@ -83,7 +82,7 @@ to the recipient's address on the selected chain. In this case, the public recip
 from the *near.com settlement account*, as that is the account used to bridge funds from the private shard to the
 public one.
 
-***
+---
 
 ## Frequently Asked Questions
 
@@ -92,39 +91,31 @@ public one.
 </Accordion>
 
 <Accordion title="A Private Shard on NEAR?">
+  While NEAR Protocol is a single blockchain, it is actually composed of multiple small chain instances called shards, which run in parallel. Each shard is in charge of certain accounts and smart contracts and operates in parallel, with all shards aggregating to form the NEAR blockchain.
 
-While NEAR Protocol is a single blockchain, it is actually composed of multiple small chain instances called shards, which run in parallel. Each shard is in charge of certain accounts and smart contracts and operates in parallel, with all shards aggregating to form the NEAR blockchain.
+  Almost all shards on NEAR are public, which means that anyone can see all the funds and transactions happening on them. However, NEAR also allows the creation of private shards, which run on the same technology as the public ones, but with the added security of being private and encrypted.
 
-Almost all shards on NEAR are public, which means that anyone can see all the funds and transactions happening on them. However, NEAR also allows the creation of private shards, which run on the same technology as the public ones, but with the added security of being private and encrypted. 
-
-This is how confidential treasuries work: they are deployed on their own private shard, which is not accessible to anyone outside the team, thus keeping all financial data private.
-
+  This is how confidential treasuries work: they are deployed on their own private shard, which is not accessible to anyone outside the team, thus keeping all financial data private.
 </Accordion>
 
 <Accordion title="How do I fund a confidential treasury?">
-
-To deposit funds into a confidential treasury, you can either use [**near.com**](https://near.com/) and [fund the treasury's account](/guides/funding-confidential-treasuries) through a confidential account there, or let NEAR Business generate a temporary deposit address and bridge the funds for you.
-
+  To deposit funds into a confidential treasury, you can either use [**near.com**](https://near.com/) and [fund the treasury's account](/guides/funding-confidential-treasuries) through a confidential account there, or let NEAR Business generate a temporary deposit address and bridge the funds for you.
 </Accordion>
 
 <Accordion title="Are payments from a confidential treasury private?">
+  Yes, all payments from a confidential treasury are private, as they are executed within the private shard. This means that the details of the payment, such as the amount, recipient, and token, are only visible to team members and not to the public.
 
-Yes, all payments from a confidential treasury are private, as they are executed within the private shard. This means that the details of the payment, such as the amount, recipient, and token, are only visible to team members and not to the public.
+  Recipients of confidential payments can either [receive the funds in a near.com confidential account](/guides/confidential-payments) or receive them directly in their public wallet.
 
-Recipients of confidential payments can either [receive the funds in a near.com confidential account](/guides/confidential-payments) or receive them directly in their public wallet.
-
-For recipients who receive payments directly in their public wallet, the sender will appear as the general NEAR Intents account.
-
+  For recipients who receive payments directly in their public wallet, the sender will appear as the general NEAR Intents account.
 </Accordion>
 
 <Accordion title="Are swaps from a confidential treasury private?">
-
-Yes, all swaps from a confidential treasury are private, as they are executed within the private shard. This means that the details of the swap, such as the amount, tokens involved, and exchange rate, are only visible to team members and not to the public.
-
+  Yes, all swaps from a confidential treasury are private, as they are executed within the private shard. This means that the details of the swap, such as the amount, tokens involved, and exchange rate, are only visible to team members and not to the public.
 </Accordion>
 
-***
+---
 
-## Ready to get started?
+## Ready to Get Started?
 
 [Create your treasury now](https://business.near.com/) and start managing your team's crypto assets securely and collaboratively!

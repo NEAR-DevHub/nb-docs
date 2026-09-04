@@ -5,36 +5,35 @@ description: "Swap assets across blockchains without leaving NEAR Business"
 
 If your team needs to [make a payment](/payments/single-payment) in a token that the treasury currently does not have, or if you simply want to rebalance the treasury's portfolio, you can create a swap request to exchange one token for another.
 
-![Swapping](/assets/docs/swap/swap-landing.webp)
+![Asset swap overview](/assets/docs/swap/swap-landing.webp)
 
 You can swap assets directly in NEAR Business, making it easy to manage your treasury's portfolio and access liquidity when needed.
 
-***
+---
 
 ## Creating a Swap Request
 
-To swap assets, simply navigate to the **Exchange** section in the left sidebar, select the asset you want to swap from and the asset you want to swap to, enter the amount, and review the swap details before confirming the request.
+To swap assets, navigate to the **`Exchange`** section in the left sidebar. Select the assets you want to swap from and to, enter the amount, and review the details before confirming the request.
 
-![Swapping](/assets/docs/swap/swap-review.webp)
+![Swap request review](/assets/docs/swap/swap-review.webp)
 
 <Warning>
-  Only team members with the [Request](/governance/members-and-roles#request) role can create swap requests.
+  Only team members with the [Requestor](/governance/members-and-roles#requestor) role can create swap requests.
 </Warning>
-
 
 ### Swap Fee
 
-We currently charge a 0.7% fee on the amount being swapped, which is included in your swap quote. This covers the costs of the underlying swap protocol - NEAR Intents - and the fee charged by NEAR Business.
+We currently charge a 0.7% fee on the amount being swapped, which is included in your swap quote. This covers the costs of the underlying swap protocol—NEAR Intents—and the fee charged by NEAR Business.
 
 <Check>
   Swaps in NEAR Business are built on NEAR Intents, a platform for multi-chain asset swaps that provides competitive rates and low fees across different blockchains.
 </Check>
 
 
-***
+---
 
 ## What's Next?
 
 Swap requests remain open for **24 hours**. During this time, members with the [Finance](/governance/members-and-roles#finance) role can vote on them.
 
-If the request does not receive enough votes - as determined by the treasury's [voting configuration](/governance/voting-settings) - within the 24-hour period, it will be automatically rejected.
+If the request does not receive enough votes—as determined by the treasury's [voting configuration](/governance/voting-settings)—within the 24-hour period, it will be automatically rejected.
