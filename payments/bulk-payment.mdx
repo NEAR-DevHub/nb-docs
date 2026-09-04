@@ -3,7 +3,7 @@ title: "Proposing Multiple Payments"
 description: "Request payments for multiple recipients at once"
 ---
 
-Besides being able to create [requests for single payments](/payments/single-payment), you can also create bulk payment requests to pay multiple recipients at once.
+You can create bulk payment requests to pay multiple recipients at once instead of creating separate [single-payment requests](/payments/single-payment).
 
 This is especially useful when you need to pay a large number of recipients with the same token, as it allows you to request all payments in a single request, saving you from having to create them separately.
 
@@ -33,14 +33,14 @@ Specify which token you want to use—all recipients will be paid in the same to
   bob.near, 21.34
   ```
 
-  Alternatively, download our <a href="https://raw.githubusercontent.com/NEAR-DevHub/trezu-docs/refs/heads/main/assets/files/bulk-payment-template.csv" onClick={(e) => { e.preventDefault(); fetch(e.currentTarget.href).then(r => r.blob()).then(b => { const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = 'bulk-payment-template.csv'; a.click(); URL.revokeObjectURL(a.href); }); }}>template</a>, fill in the payment details, and upload the file in the **`Upload File`** section.
+  Alternatively, download the <a href="https://raw.githubusercontent.com/NEAR-DevHub/trezu-docs/refs/heads/main/assets/files/bulk-payment-template.csv" onClick={(e) => { e.preventDefault(); fetch(e.currentTarget.href).then(r => r.blob()).then(b => { const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = 'bulk-payment-template.csv'; a.click(); URL.revokeObjectURL(a.href); }); }}>template</a>, fill in the payment details, and upload the file in the **`Upload File`** section.
 </Accordion>
 
 ---
 
 ## Reviewing the Request
 
-Make sure to review the bulk payment request before submitting it. You can also add a comment to provide more context to the approvers.
+Review the bulk payment request before submitting it. You can add a comment to provide more context to the approvers.
 
 ![Bulk payment review](/assets/docs/payments/bulk-payment-review.webp)
 
@@ -50,7 +50,7 @@ Make sure to review the bulk payment request before submitting it. You can also 
 
 
 <Warning>
-  Make sure to select the right blockchain and enter the correct wallet addresses, as payments are irreversible.
+  Verify the blockchain and wallet addresses before submitting the request, as payments are irreversible.
 </Warning>
 
 ---
