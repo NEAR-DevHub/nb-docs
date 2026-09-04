@@ -12,7 +12,7 @@ NEAR Business treasuries are **confidential**, meaning all financial data is
 
 ## How Do Confidential Treasuries Work?
 
-Confidential treasuries are multisig wallet smart contracts deployed on a **private shard** on NEAR Protocol. They use technology similar to that securing public treasuries on NEAR while keeping all financial data out of public view.
+Confidential treasuries are multisig wallet smart contracts deployed on a **private shard** on NEAR Protocol. This allows them to combine the security of battle-tested multisig smart contracts on NEAR with the privacy of confidential transaction processing.
 
 <img src="/assets/docs/confidential/diagram.png" alt="Confidential treasury architecture" />
 
@@ -37,7 +37,7 @@ There are two ways to do this, depending on how your team wants to operate.
 
 ### Automatic Bridging
 
-Your treasury can receive public funds through a temporary account and automatically bridge them to the private shard.
+Your treasury can receive funds from public blockchains through a temporary account and automatically bridge them to the private shard.
 
 Furthermore, using a unique deposit address for each transfer makes it harder for external observers to link multiple deposits, wallets, or counterparties to the same treasury, which provides additional privacy.
 
@@ -80,7 +80,7 @@ Payments to [near.com](https://near.com/) confidential accounts will be executed
 When making payments to public wallets, NEAR Business **automatically bridges** the funds from the private shard
 to the recipient's address on the selected chain. In this case, the public recipient will see the funds arriving
 from the *near.com settlement account*, as that is the account used to bridge funds from the private shard to the
-public one.
+destination blockchain.
 
 ---
 
