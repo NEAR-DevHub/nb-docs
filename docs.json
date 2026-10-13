@@ -76,5 +76,6 @@
   "logo": {
     "light": "/assets/menu/logo-light.svg",
     "dark": "/assets/menu/logo-dark.svg"
-  }
+  },
+  "description": "Confidential treasury management for crypto-native finance teams"
 }
