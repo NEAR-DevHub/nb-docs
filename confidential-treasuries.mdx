@@ -26,11 +26,15 @@ Confidential treasuries are multisig wallet smart contracts deployed on a **priv
 </Accordion>
 
 <Accordion title="Where are assets held, and how do deposits and withdrawals work?">
-  On each public chain, assets are pooled in the NEAR Intents account on that chain. Each treasury has its own confidential balance on the private shard, rather than a separate wallet holding tokens on every public chain.
+  Your treasury holds assets as token balances on `near.com` smart contract - deployed within the private shard.
 
-  Temporary deposit addresses route funds to your treasury's confidential balance; they are not permanent wallets where the treasury's assets remain. Payments to other confidential accounts transfer balances within the private shard. Withdrawals and payments to public wallets release funds to the recipient on the selected chain from the NEAR Intents account.
+  `near.com` holds non-custodial pools in multiple public chains, when you deposit assets on them, the corresponding token balances are credited to your treasury on the private shard.
 
-  Your team controls the treasury's balance through its multisig rules. The pooled accounts operate through permissionless NEAR Intents infrastructure; NEAR Business does not custody your keys or funds.
+  Swaps are reflected as changes in the token balances within your treasury on the private shard. For example, if you swap ETH for BTC, the ETH balance decreases while the BTC balance increases accordingly.
+
+  When you withdraw assets from your treasury, the corresponding token balances on the private shard are redeemed, and the pooled assets on the destination chain are used to fulfill the withdrawal.
+
+  This lets your treasury manage assets from multiple chains without maintaining a separate wallet on each chain. Your team controls the treasury's assets; the pooled accounts provide the backing and infrastructure for deposits and withdrawals.
 </Accordion>
 
 ---
