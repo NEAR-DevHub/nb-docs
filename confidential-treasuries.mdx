@@ -25,6 +25,18 @@ Confidential treasuries are multisig wallet smart contracts deployed on a **priv
   This makes private shards an ideal solution for confidential treasuries, as they provide all the security and functionality of a public shard, but with the added privacy of not exposing any financial data to the public.
 </Accordion>
 
+<Accordion title="Where are assets held, and how do deposits and withdrawals work?">
+  Your treasury holds assets as token balances on `near.com` smart contract - deployed within the private shard.
+
+  `near.com` infrastructure manages non-custodial pools in multiple public chains. When you deposit assets on them, the corresponding token balances are credited to your treasury on the private shard.
+
+  Swaps are reflected as changes in the token balances within your treasury on the private shard. For example, if you swap ETH for BTC, the ETH balance decreases while the BTC balance increases accordingly.
+
+  When you withdraw assets from your treasury, the corresponding token balances on the private shard are redeemed, and the pooled assets on the destination chain are used to fulfill the withdrawal.
+
+  This lets your treasury manage assets from multiple chains without maintaining a separate wallet on each chain. Your team controls the treasury's assets; the pooled accounts provide the backing and infrastructure for deposits and withdrawals.
+</Accordion>
+
 ---
 
 ## Deposits
@@ -79,7 +91,7 @@ Payments to [near.com](https://near.com/) confidential accounts will be executed
 
 When making payments to public wallets, NEAR Business **automatically bridges** the funds from the private shard
 to the recipient's address on the selected chain. In this case, the public recipient will see the funds arriving
-from the *near.com settlement account*, as that is the account used to bridge funds from the private shard to the
+from the *NEAR Intents account on the destination chain*, as that is the account used to bridge funds from the private shard to the
 destination blockchain.
 
 ---
