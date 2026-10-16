@@ -1,0 +1,135 @@
+---
+title: "Login Methods"
+description: "Find all the ways in which you can access the Treasuries"
+---
+
+Near Business offers multiple ways to log in and access your treasuries, depending on your needs and preferences.
+
+![Login modal with passkey and crypto wallet options](/assets/docs/login/login-modal.webp)
+
+Those familiar with crypto wallets can readily connect their accounts using any NEAR wallet, or
+login with a Ledger device.
+
+For those needing another safe and easy way to access, the platform offers passkeys, which allow you to
+securely access Near Business using your device’s biometric authentication.
+
+<Note>
+  Near Business is a non-custodial solution, which means that your funds are always under your control.
+</Note>
+
+<Tip>
+  Both passkeys and crypto wallets gives you access to all features, so you can safely choose whichever fits your needs best.
+</Tip>
+
+***
+
+## Comparison of Login Methods
+
+|                                                | 🫆 Passkeys                                   | 🌐 Crypto Wallets                          |
+|------------------------------------------------|-----------------------------------------------|--------------------------------------------|
+| Easy to secure                                 | ✅ Yes, kept safe by your device               | ⚠️ Need to secure a recovery phrase offline |
+| Grants access to all features                  | ✅ Yes                                         | ✅ Yes                                      |
+| Can use and create **confidential treasuries** | ✅ Yes                                         | ✅ Yes                                      |
+| Can be used to log in to other blockchain apps | 🔒 No, your passkey is for Near Business only | ✅ Yes, can be used in other crypto apps    |
+| Can be used on other devices                   | ⚠️ [Depends on where it is saved](#passkey-storage-and-recovery) | ✅ Yes, using the recovery phrase |
+| Can I regain access if I lose my device?       | ⚠️ [Only if the passkey is still available](#passkey-storage-and-recovery) | ✅ Yes, using the recovery phrase |
+
+---
+
+## Passkeys
+
+Passkeys are a secure authentication method that allows you to access Near Business using your own device's
+authentication method, such as fingerprint or facial recognition.
+
+To start using passkeys, select `Sign Up` in the login modal. You will then be prompted to create a passkey
+on your device, and a new on-chain account will be automatically created for you.
+
+![Passkey sign-up option in the login modal](/assets/docs/login/passkeys.webp)
+
+Once created, you can use the `Sign In` option to login using your passkey.
+
+<Tip>
+  There is no need to fund your account, as Near Business covers the cost of creating
+  and using a treasury.
+</Tip>
+
+### Passkey Storage and Recovery
+
+Depending on the service or device you use to store your passkeys, the recovery options and device specificity may vary:
+
+| Service                                                                                                                                                                    | Stored in                            | Device specific?                                                  | Can it be recovered?                                                                                                                                                                                                               |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|-------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <Icon icon="apple" iconType="brands" size={16} /> [Apple Passwords](https://support.apple.com/en-eg/guide/iphone/iph82d6721b2/ios)                                   | iCloud Keychain.                     | No; it syncs to your approved Apple devices.                      | Yes. Set up iCloud Keychain on another device. If all your devices are lost, follow [Apple's recovery steps](https://support.apple.com/en-eg/guide/iphone/iph82d6721b2/ios).                                                       |
+| <Icon icon="google" iconType="brands" size={16} /> [Google Password Manager](https://support.google.com/chrome/answer/13168025)                                            | Google Password Manager.             | No; it syncs to your other devices using Google Password Manager. | Yes. Use your Google Password Manager PIN to access synced passkeys on a new device. [Google's instructions](https://support.google.com/chrome/answer/13168025).                                                                   |
+| <Icon icon="google" iconType="brands" size={16} /> [Chrome profile](https://support.google.com/chrome/answer/13168025)                                                     | The Chrome profile on that computer. | Yes; the passkey stays on that computer.                          | No, if the computer or Chrome profile is lost. [Google says these passkeys cannot be recovered](https://support.google.com/chrome/answer/13168025).                                                                                |
+| <Icon icon="windows" iconType="brands" size={16} /> [Microsoft Password Manager](https://support.microsoft.com/en-us/accounts-billing/security/manage-your-saved-passkeys) | Microsoft Password Manager.          | No; it syncs to devices where you use the same account.           | Yes. Sign in to Edge with the same account on another device. Work or school accounts may have restrictions. [Microsoft's instructions](https://support.microsoft.com/en-us/accounts-billing/security/manage-your-saved-passkeys). |
+| <Icon icon="windows" iconType="brands" size={16} /> [Windows Hello](https://support.microsoft.com/en-us/accounts-billing/security/create-save-passkey)                     | That Windows device.                 | Yes; the passkey is saved locally.                                | No, if the device is lost, unless you also saved another copy. [Microsoft explains device-bound passkey recovery](https://support.microsoft.com/en-us/accounts-billing/security/what-are-passkeys-why-they-matter).                |
+| <Icon icon="key" size={16} /> [1Password](https://support.1password.com/lost-device/)                                                                                      | Your 1Password account.              | No; passkeys sync with your account.                              | Yes, if you can sign in to 1Password on another device. [1Password's lost-device guidance](https://support.1password.com/lost-device/).                                                                                            |
+
+<Warning>
+  Near Business does not store your passkeys or offer a way to recover them. Keep your passkey manager and its recovery methods secure.
+</Warning>
+
+***
+
+## Crypto Wallets
+
+To connect with your wallet, simply select the `NEAR Wallet` option from the login modal.
+
+![Crypto wallet selection options in the login modal](/assets/docs/login/near-wallets.webp)
+
+<Tip>
+  There is no need to fund your NEAR account, as Near Business covers the cost of creating
+  and using a treasury.
+</Tip>
+
+***
+
+## Hardware Wallets
+
+Near Business supports Ledger, a popular hardware wallet that allows you to securely store your crypto assets offline.
+You can connect using your Ledger device and use it to manage your treasuries.
+
+<Info>
+  Learn more about how to use Ledger in our [Ledger Guide](/guides/ledger)
+</Info>
+
+***
+
+## Frequently Asked Questions
+
+<Accordion title="Which methods should I use?">
+  Use passkeys if you are new to crypto wallets, or if you want to create a separate account that is secure and easy to use.
+  Otherwise, you can use your wallet if you already have one.
+</Accordion>
+
+<Accordion title="Do all login methods have access to the same features?">
+  Yes, all login methods have access to the same features and functionality. The only difference is the way in which you authenticate and access your treasuries.
+</Accordion>
+
+<Accordion title="Which login method is inherently more private?">
+  How private each method is depends on your usage. Using a passkey provides the same level of privacy as using
+  a completely new on-chain account, and since NEAR Business covers the cost of creating and using a treasury,
+  you do not even need to fund it.
+
+  Using an existing crypto wallet is generally less private, as it might have a history of transactions that can be linked to your identity.
+</Accordion>
+
+<Accordion title="What happens if I lose the device holding my passkey?">
+  Depends on where your passkey was stored (see [table above](#passkey-storage-and-recovery)). In devices with syncing passkey managers - such as Apple Passwords or Google Password Manager - you
+  should be able to recover it by logging into a new device. If it was stored only on the lost device and you did not have any recovery options,
+  you may lose access to your Near Business account.
+  
+  Near Business cannot recover the passkey for you.
+</Accordion>
+
+<Accordion title="Who was control over my wallet's funds?">
+  Both your funds and your treasuries' funds are always under your control. Near Business is a non-custodial solution, which means that we
+  do not hold your keys or funds, and never have access to them.
+</Accordion>
+
+***
+
+## Ready to get started?
+
+[Create your treasury now](https://business.near.com/) and start managing your team's crypto assets securely and collaboratively!
